@@ -1,82 +1,52 @@
-# Lightweight React Template for KAVIA
+# News Explorer Frontend (React)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A modern and minimalistic React app for browsing, searching, filtering, viewing, and bookmarking news articles. This initial version uses placeholder data and is ready for backend integration.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Browse a responsive news feed (grid)
+- Search and filter by category
+- View article details in a modal
+- Bookmark articles (saved to localStorage)
+- Responsive layout (header, sidebar, main content)
+- Light theme by default, optional dark theme toggle
+- Environment variable scaffolding for API
 
 ## Getting Started
 
-In the project directory, you can run:
+Install dependencies and start the dev server:
+- npm install
+- npm start
 
-### `npm start`
+Open http://localhost:3000 to view it in your browser.
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Environment Variables
 
-### `npm test`
+Copy .env.example to .env and set variables as needed:
+- REACT_APP_API_BASE_URL=<your_backend_base_url>
 
-Launches the test runner in interactive watch mode.
+Note: Do not commit your .env file.
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- src/App.js — main UI implementation (header, sidebar, feed, modal)
+- src/App.css — styles and theme variables
+- src/index.js — entry point
+- .env.example — environment variable scaffold
 
-## Customization
+## Theming
 
-### Colors
+Colors are defined via CSS variables in src/App.css. Primary palette:
+- Primary: #1a73e8
+- Secondary: #e8eaed
+- Accent: #ff7043
 
-The main brand colors are defined as CSS variables in `src/App.css`:
+## Future Backend Integration
 
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
+Replace placeholder data in App.js with real API calls to REACT_APP_API_BASE_URL endpoints. Fetch logic can be added where STUB_ARTICLES is currently used.
 
-### Components
+## Scripts
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- npm start — start dev server
+- npm run build — build for production
+- npm test — run tests
